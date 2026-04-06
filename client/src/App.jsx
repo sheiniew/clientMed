@@ -2,7 +2,6 @@ import Chat from "./Chat"
 import Header from "./Header"
 import Login from "./forms/Login"
 import Home from "./Home"
-import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProtectedRoute from "./hooks/ProtectedRoute"
 import PublicRoute from "./hooks/PublicRoute"
