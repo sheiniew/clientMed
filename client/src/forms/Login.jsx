@@ -14,7 +14,7 @@ export default function Login() {
 
 
     async function loginRequest(email, password) {
-        const res = await fetch("http://localhost:3000/auth/login", {
+        const res = await fetch("https://backendmed-8mxy.onrender.com/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
