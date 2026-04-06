@@ -1,17 +1,22 @@
 import axios from "axios";
 
-const token = localStorage.getItem("token");
-
 export async function sendMessage(input) {
-    try {
-        const response = await axios.post("https://backendmed-8mxy.onrender.com/api/chat", { message: input }, {
+
+    const token = localStorage.getItem("token"); // 🔥 AQUÍ SIEMPRE
+
+    if (!token) {
+        throw new Error("No hay token");
+    }
+
+    const response = await axios.post(
+        "https://backendmed-8mxy.onrender.com/api/chat",
+        { message: input },
+        {
             headers: {
-                Authorization: `Bearer ${token}`
+                Authorization: `Bearer ${token}` // 🔐 CLAVE
             }
-        });
-        return response.data.reply;
-    } catch (error) {
-        console.error("Error enviando mensaje:", error);
-        throw error;
-    } 
+        }
+    );
+
+    return response.data.reply;
 }
