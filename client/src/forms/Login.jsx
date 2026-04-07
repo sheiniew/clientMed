@@ -17,7 +17,7 @@ export default function Login() {
 
 
     async function loginRequest(email, password) {
-        const res = await fetch(`${LOCAL_API_URL}/auth/login`, {
+        const res = await fetch(`${API_URL}/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
