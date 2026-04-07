@@ -80,7 +80,7 @@ export default function Home() {
                 </Link>
                 
                 <Link
-                  to="/servicios"
+                  to="/services"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 >
                   <span>Ver servicios</span>

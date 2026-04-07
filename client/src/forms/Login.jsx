@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
 
+const API_URL = "https://backendmed-8mxy.onrender.com";
+const LOCAL_API_URL = "http://localhost:3000";
+
 
 export default function Login() {
 
@@ -14,7 +17,7 @@ export default function Login() {
 
 
     async function loginRequest(email, password) {
-        const res = await fetch("https://backendmed-8mxy.onrender.com/auth/login", {
+        const res = await fetch(`${LOCAL_API_URL}/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
